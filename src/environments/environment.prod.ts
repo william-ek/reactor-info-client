@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  imageServiceHost: 'http://localhost:8080/reactor'
 };

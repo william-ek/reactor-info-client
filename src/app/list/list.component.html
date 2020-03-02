@@ -1,0 +1,27 @@
+<div class="content-container">
+  <div class="tableFixedHead" style="height: 700px">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Manufacturer</th>
+          <th>Reactor Type</th>
+          <th>Serial Number</th>
+          <th>Location Description</th>
+          <th><button (click)="getReactors()" class="fa fa-refresh fa-2x" style="background-color: transparent; border: transparent"></button></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reactor of reactors">
+          <td>{{ reactor.manufacturer }}</td>
+          <td>{{ reactor.type }}</td>
+          <td>{{ reactor.serialNumber }}</td>
+          <td>{{ reactor.locationDescription }}</td>
+          <td>
+            <button (click)="showReactorEditDialog(reactor)" class="fa fa-edit fa-2x" style="background-color: transparent; border: transparent"></button>
+            <button (click)="deleteReactor(reactor)" class="fa fa-trash fa-2x" style="background-color: transparent; border: transparent"></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
